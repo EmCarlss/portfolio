@@ -1,4 +1,4 @@
-# Emanuel Carlsson – academic minimal GitHub Pages portfolio
+# Emanuel Carlsson – GitHub Pages portfolio
 
 This is a minimal portfolio of me.
 
