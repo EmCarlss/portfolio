@@ -14,7 +14,7 @@
       <h1>Emanuel Carlsson</h1>
       <p class="subtitle">Senior statistician and economist</p>
       <p class="contact">
-        Stockholm, Sweden · <a href="mailto:emanuel.carlsson@gmail.com">emanuel.carlsson@gmail.com</a> ·
+        Stockholm, Sweden · <a class="email" href="#" data-user="emanuel.carlsson" data-domain="gmail.com">emanuel.carlsson [at] gmail.com</a> ·
         <a href="https://github.com/EmCarlss">GitHub</a>
         <!-- Add these links when ready:
         · <a href="YOUR_RESEARCHGATE_URL_HERE">ResearchGate</a>
@@ -184,5 +184,17 @@
       </ul>
     </section>
   </main>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var emailLink = document.querySelector('.contact a.email');
+      if (emailLink) {
+        var user = emailLink.getAttribute('data-user');
+        var domain = emailLink.getAttribute('data-domain');
+        var email = user + '@' + domain;
+        emailLink.href = 'mailto:' + email;
+        emailLink.textContent = user + ' [at] ' + domain;
+      }
+    });
+  </script>
 </body>
 </html>
